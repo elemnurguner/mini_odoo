@@ -1,0 +1,71 @@
+# B2B Phone Sales - Odoo 16 Module
+
+## 🔹 Modül Hakkında
+B2B Phone Sales, Odoo 16 için geliştirilmiş basit bir B2B satış modülüdür.  
+Bu modül ile telefon satışı yapan firmalar, kategoriler, ürünler, müşteriler, siparişler ve ödemeleri yönetebilir.
+
+---
+
+## 🔹 Mevcut Özellikler
+
+### 1. Modül Yapısı
+b2b_phone_sales/
+├── init.py
+├── manifest.py
+├── models/
+│ ├── category.py
+│ ├── product.py
+│ ├── customer.py
+│ ├── order.py
+│ ├── payment.py
+│ └── user_ext.py
+├── views/
+│ ├── category_views.xml
+│ ├── product_views.xml
+│ ├── customer_views.xml
+│ ├── order_views.xml
+│ ├── payment_views.xml
+│ └── menu.xml
+└── security/
+├── ir.model.access.csv
+└── b2b_security.xml
+
+Devamında  eklenecek geliştirmeler
+
+1. **Otomatik Hesaplamalar**
+   - `order.total_amount` otomatik hesaplama.
+   - `payment.amount` doğrulama.
+
+2. **İlişkiler ve Veri Bağlantıları**
+   - `order` ↔ `customer` (Many2one)
+   - `order` ↔ `product_ids` (Many2many)
+
+3. **Gelişmiş Görünümler**
+   - Kanban, Pivot ve Graph view ekleme.
+   - Satış raporları ve ödeme takibi.
+
+4. **Raporlama**
+   - Sipariş veya fatura PDF çıktısı (QWeb) oluşturma.
+
+5. **Otomatik Bildirim / E-posta**
+   - Sipariş alındığında veya ödeme yapıldığında kullanıcıya bildirim.
+
+6. **Gelişmiş Security**
+   - Rol ve grup bazlı erişim kontrolü.
+
+7. **Demo Verileri**
+   - Test ve demo için `demo_data.xml` ekleme.
+
+8. **Filtreleme ve Gruplama**
+   - Tree view’da filtreler ve gruplayabilme seçenekleri.
+
+---
+
+## 🔹 Kurulum ve Kullanım
+
+1. Docker ile Odoo ve PostgreSQL containerlarını başlatın.
+2. Modül klasörünü `addons_path` içine ekleyin.
+3. Terminalden:
+```bash
+docker exec -it <odoo_container> bash
+python3 odoo-bin -c /mnt/extra-addons/odoo.conf -d <veritabani_adi> -u b2b_phone_sales --dev=reload

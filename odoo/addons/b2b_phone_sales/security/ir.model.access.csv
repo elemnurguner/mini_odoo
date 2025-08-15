@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_category,b2b.category,model_b2b_category,base.group_user,1,1,1,1
+access_product,b2b.product,model_b2b_product,base.group_user,1,1,1,1
+access_customer,b2b.customer,model_b2b_customer,base.group_user,1,1,1,1
+access_order,b2b.order,model_b2b_order,base.group_user,1,1,1,1
+access_payment,b2b.payment,model_b2b_payment,base.group_user,1,1,1,1

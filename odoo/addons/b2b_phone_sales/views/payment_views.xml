@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">Payment Tree</field>
+        <field name="model">b2b.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="order_id"/>
+                <field name="payment_date"/>
+                <field name="amount"/>
+                <field name="payment_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">Payment Form</field>
+        <field name="model">b2b.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="order_id"/>
+                        <field name="payment_date"/>
+                        <field name="amount"/>
+                        <field name="payment_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

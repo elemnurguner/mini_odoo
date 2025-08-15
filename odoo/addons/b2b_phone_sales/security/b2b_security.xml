@@ -1,0 +1,6 @@
+<odoo>
+<record id="group_b2b_user" model="res.groups">
+    <field name="name">B2B User</field>
+    <field name="category_id" eval="False"/>
+</record>
+</odoo>
